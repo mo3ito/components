@@ -3,7 +3,7 @@ import axios from 'axios';
 export default async function handler(req, res) {
   const {filename} = req.query;
   const DUMMY_URL =
-    `https://minio.siraf.app/tickets/media/private/MessageFile/${filename}`;
+    `https://minio.fake.app/tickets/media/${filename}`;
 
   try {
     const response = await axios.get(DUMMY_URL, {
