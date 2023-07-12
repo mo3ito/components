@@ -1,11 +1,11 @@
 
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { SIRAF } from 'utilities/constants/cookieKeys';
+import { TOKEN_NAME } from 'utilities/constants/cookieKeys';
 
 
 export default async function senderFile(path ,data , setProgress) {
-    const token =await Cookies.get(SIRAF)
+    const token =await Cookies.get( TOKEN_NAME )
     
     try {
       const response = await axios.post(path, data, {
